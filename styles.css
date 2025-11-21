@@ -24,14 +24,20 @@ body {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
 }
 
 .hero-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #36454f;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -39,7 +45,8 @@ body {
     margin-bottom: 2rem;
     color: #36454f;
     line-height: 1.6;
-    max-width: 100%;
+    max-width: 500px;
+    text-align: center;
 }
 
 .cta-buttons {
@@ -81,89 +88,6 @@ body {
 
 .btn-secondary:hover {
     opacity: 0.8;
-}
-
-/* Features Section - Timeline */
-.features {
-    padding: 3rem 0;
-}
-
-.timeline {
-    position: relative;
-    padding: 1.5rem 0;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
-    position: relative;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 1.125rem;
-    top: 3.5rem;
-    width: 2px;
-    height: calc(100% + 1rem);
-    background: #0a1d37;
-    opacity: 0.15;
-    z-index: 0;
-}
-
-.timeline-marker {
-    width: 2.75rem;
-    height: 2.75rem;
-    min-width: 2.75rem;
-    background: #0a1d37;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.125rem;
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(10, 29, 55, 0.2);
-}
-
-.timeline-content {
-    flex: 1;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.timeline-content:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.timeline-content h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #36454f;
-    line-height: 1.3;
-}
-
-.timeline-content p {
-    font-size: 0.9375rem;
-    color: #36454f;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.85;
 }
 
 /* Modal Styles */
@@ -257,7 +181,7 @@ body {
 
 /* Screenshots Section */
 .screenshots {
-    padding: 3rem 0;
+    padding: 4rem 0;
     margin-top: 2rem;
 }
 
@@ -305,7 +229,8 @@ body {
     }
 
     .hero {
-        padding: 4rem 0 3rem;
+        padding: 6rem 0 8rem;
+        min-height: 80vh;
     }
 
     .hero-title {
@@ -314,6 +239,7 @@ body {
 
     .hero-subtitle {
         font-size: 1.125rem;
+        max-width: 600px;
     }
 
     .cta-buttons {
@@ -326,43 +252,6 @@ body {
         min-width: 180px;
     }
 
-    .features {
-        padding: 4rem 0;
-    }
-
-    .timeline {
-        padding: 2rem 0;
-    }
-
-    .timeline-item {
-        margin-bottom: 3rem;
-        gap: 1.5rem;
-    }
-
-    .timeline-item:not(:last-child)::after {
-        left: 1.375rem;
-        top: 4rem;
-    }
-
-    .timeline-marker {
-        width: 3.25rem;
-        height: 3.25rem;
-        min-width: 3.25rem;
-        font-size: 1.25rem;
-    }
-
-    .timeline-content {
-        padding: 2rem;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.375rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .timeline-content p {
-        font-size: 1rem;
-    }
 
     .screenshots {
         padding: 4rem 0;
@@ -391,7 +280,8 @@ body {
     }
 
     .hero {
-        padding: 2rem 0 1.5rem;
+        padding: 3rem 0 5rem;
+        min-height: 60vh;
     }
 
     .hero-title {
@@ -400,46 +290,9 @@ body {
 
     .hero-subtitle {
         font-size: 0.9375rem;
+        max-width: 100%;
     }
 
-    .features {
-        padding: 2rem 0;
-    }
-
-    .timeline {
-        padding: 1rem 0;
-    }
-
-    .timeline-item {
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .timeline-item:not(:last-child)::after {
-        left: 1rem;
-        top: 3rem;
-        height: calc(100% + 0.5rem);
-    }
-
-    .timeline-marker {
-        width: 2.25rem;
-        height: 2.25rem;
-        min-width: 2.25rem;
-        font-size: 0.9375rem;
-    }
-
-    .timeline-content {
-        padding: 1.25rem;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.125rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-content p {
-        font-size: 0.875rem;
-    }
 
     .modal-content {
         padding: 1.5rem;
