@@ -66,11 +66,16 @@
         <div class="modal-content">
             <button class="modal-close" id="close-modal">&times;</button>
             <h2>Share Your Feedback</h2>
-            <form class="feedback-form" id="feedback-form">
-                <input type="text" placeholder="Your name" required>
-                <textarea placeholder="Your feedback..." rows="5" required></textarea>
+            <form class="feedback-form" id="feedback-form" action="https://formspree.io/f/xwpwgbkv" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <textarea name="feedback" placeholder="Your feedback..." rows="5" required></textarea>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div class="success-message" id="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your feedback has been submitted successfully. We appreciate your input!</p>
+            </div>
         </div>
     </div>
 

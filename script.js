@@ -72,18 +72,52 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Feedback form submission
-feedbackForm.addEventListener('submit', function(e) {
+feedbackForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    const name = this.querySelector('input[type="text"]').value;
-    const feedback = this.querySelector('textarea').value;
+    const formData = new FormData(this);
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
     
-    // Here you would typically send this to a backend
-    alert(`Thank you, ${name}! Your feedback has been submitted. We appreciate your input!`);
+    // Show loading state
+    submitButton.textContent = 'Submitting...';
+    submitButton.disabled = true;
     
-    // Reset form and close modal
-    this.reset();
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+    try {
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Show success message
+            this.style.display = 'none';
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'flex';
+            
+            // Reset form and button
+            this.reset();
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            
+            // Close modal after 3 seconds
+            setTimeout(function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                // Reset to form view
+                feedbackForm.style.display = '';
+                successMessage.style.display = 'none';
+            }, 3000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        alert('Sorry, there was an error submitting your feedback. Please try again.');
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
+    }
 });
 
