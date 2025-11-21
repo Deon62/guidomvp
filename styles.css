@@ -157,6 +157,16 @@ textarea:active {
     margin-top: 2rem;
 }
 
+.download-instructions {
+    font-size: 0.875rem;
+    color: #36454f;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    max-width: 500px;
+    text-align: center;
+    opacity: 0.8;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -450,6 +460,12 @@ textarea:active {
         font-size: 0.9375rem;
     }
 
+    .download-instructions {
+        font-size: 0.9375rem;
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
@@ -526,6 +542,11 @@ textarea:active {
 
     .mvp-text {
         font-size: 0.8125rem;
+    }
+
+    .download-instructions {
+        font-size: 0.8125rem;
+        margin-top: 1.25rem;
     }
 
     .modal-content {
