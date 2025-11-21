@@ -15,7 +15,7 @@
             <p class="hero-subtitle">Get a local tour guide to show you around your new city. Perfect for newcomers who want to discover their city like a local.</p>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary" id="download-btn">Download APK</a>
-                <a href="#request-feature" class="btn btn-secondary">Request Feature</a>
+                <button class="btn btn-secondary" id="share-feedback-btn">Share Feedback</button>
             </div>
         </section>
 
@@ -46,16 +46,44 @@
             </div>
         </section>
 
-        <!-- Request Feature Section -->
-        <section id="request-feature" class="request-feature">
-            <h2>Request a Feature</h2>
-            <form class="feature-form" id="feature-form">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <textarea placeholder="Tell us about your feature idea..." rows="4" required></textarea>
-                <button type="submit" class="btn btn-secondary">Submit</button>
-            </form>
+        <!-- Screenshots Section -->
+        <section class="screenshots">
+            <h2 class="screenshots-title">App Screenshots</h2>
+            <div class="screenshots-gallery">
+                <div class="screenshot-item">
+                    <img src="assets/one.jpg" alt="App screenshot 1" loading="lazy">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/two.jpg" alt="App screenshot 2" loading="lazy">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/three.jpg" alt="App screenshot 3" loading="lazy">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/four.jpg" alt="App screenshot 4" loading="lazy">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/five.jpg" alt="App screenshot 5" loading="lazy">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/six.jpg" alt="App screenshot 6" loading="lazy">
+                </div>
+            </div>
         </section>
+
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal-overlay" id="feedback-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <h2>Share Your Feedback</h2>
+            <form class="feedback-form" id="feedback-form">
+                <input type="text" placeholder="Your name" required>
+                <textarea placeholder="Your feedback..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
