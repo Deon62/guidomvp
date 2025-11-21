@@ -21,6 +21,56 @@ body {
     width: 100%;
 }
 
+/* Request Modal */
+.request-modal-content {
+    text-align: center;
+    max-width: 450px;
+}
+
+.request-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+    color: #36454f;
+    padding: 1rem 0 0 0;
+}
+
+.request-modal-content .btn {
+    width: auto;
+    min-width: 120px;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    color: #36454f;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.footer-link {
+    color: #0a1d37;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: opacity 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+    color: #0a4d8c;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
@@ -252,6 +302,24 @@ body {
         min-width: 180px;
     }
 
+    .request-modal-content {
+        max-width: 500px;
+    }
+
+    .request-text {
+        font-size: 1.25rem;
+        padding: 1.5rem 0 0 0;
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding: 2.5rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .footer-text {
+        font-size: 0.9375rem;
+    }
 
     .screenshots {
         padding: 4rem 0;

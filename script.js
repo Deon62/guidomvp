@@ -1,3 +1,35 @@
+// Request Modal - Show on page load
+const requestModal = document.getElementById('request-modal');
+const okayBtn = document.getElementById('okay-btn');
+
+// Show request modal when page loads
+window.addEventListener('load', function() {
+    requestModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+// Close request modal with Okay button
+okayBtn.addEventListener('click', function() {
+    requestModal.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close request modal when clicking outside
+requestModal.addEventListener('click', function(e) {
+    if (e.target === requestModal) {
+        requestModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Close request modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && requestModal.classList.contains('active')) {
+        requestModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
 // Download button functionality
 document.getElementById('download-btn').addEventListener('click', function(e) {
     e.preventDefault();
